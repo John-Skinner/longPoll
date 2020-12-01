@@ -1,0 +1,22 @@
+extends layout
+block head
+  script(src='/public/chatter.js')
+  script.
+    window.onload = () =>
+    signIn();
+
+block content
+  h1 Chat:
+    em(id='id').
+      #{id}
+  textarea(id='chatField'
+  rows='5'
+  columns='80') Enter Text
+  p
+  button(id='send'
+  onclick="sendMsg()") Send
+  p
+  h2 Log
+  p
+  h3(id='log')
+
